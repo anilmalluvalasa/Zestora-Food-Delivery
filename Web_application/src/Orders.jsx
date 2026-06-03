@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import "./Order.css";
 import { useNavigate } from 'react-router-dom';
-import { addtoCart } from './CartSlice';
+import { addtoCart } from './cartSlice';
 
 function Orders() {
 
