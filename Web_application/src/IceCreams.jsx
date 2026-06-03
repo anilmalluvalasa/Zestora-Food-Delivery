@@ -118,9 +118,15 @@ let totalItems = filteredItems.length;
 
       <h3>{cream.name}</h3>
 
-      <p className="price">
-        ₹{cream.price}
-      </p>
+        <p className="food-description">
+
+          {cream.description}
+
+        </p>
+
+        <p className="price">
+          ₹{cream.price}
+        </p>
 
       <p className="rating">
         ⭐⭐⭐⭐⭐

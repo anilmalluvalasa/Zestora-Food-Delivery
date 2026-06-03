@@ -146,8 +146,8 @@
 
   display:grid;
 
-  grid-template-columns:
-  repeat(auto-fill,minmax(260px,1fr));
+grid-template-columns:
+repeat(4,1fr);
 
   gap:28px;
 }
@@ -183,6 +183,7 @@
   flex-direction: column;
 
   padding-bottom: 16px;
+  min-height:520px;
 }
 
 /* ===== Shine Effect ===== */
@@ -240,6 +241,7 @@
   height:210px;
 
   object-fit:cover;
+  transition:.4s ease;
 }
 /* ===== Zoom ===== */
 
@@ -317,12 +319,20 @@
 /* =========================================
    PRODUCT NAME
 ========================================= */
-
 .nonveg-container h3 {
 
-  font-size:20px;
-}
+  font-size:21px;
 
+  min-height:50px;
+
+  margin:15px 18px 10px;
+
+  color:#ffffff;
+
+  font-weight:700;
+
+  line-height:1.4;
+}
 
 /* =========================================
    PRICE
@@ -330,12 +340,13 @@
 
 .nonveg-container .price {
 
-  margin: 0 18px;
+  margin:0 18px;
 
-  font-size: 19px;
-  font-weight: 800;
+  color:#ffb74d;
 
-  color: #ff8a65;
+  font-size:22px;
+
+  font-weight:800;
 }
 
 /* =========================================
@@ -359,7 +370,9 @@
 
 .nonveg-container .rating span {
 
-  color: #d1d5db;
+  color:#f5f5f5;
+
+  font-weight:600;
 }
 
 /* =========================================
@@ -718,5 +731,16 @@
 
 .nonveg-container ol li button{
 
-  margin-top:auto;
+  margin-top:5px;
+}
+.food-desc{
+
+  margin-left: 20px;
+  margin-top:-10px !important;
+  margin-bottom: 8px;
+  color:#cbd5e1;
+
+  font-size:14px;
+
+  font-weight:500;
 }

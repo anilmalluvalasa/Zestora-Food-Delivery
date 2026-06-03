@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import "./Nonveg.css";
 import { useDispatch } from 'react-redux';
 import { addtoCart } from "./cartSlice";
 import Veg from './Veg';
 import { toast,ToastContainer} from 'react-toastify';
 import Footer from './Footer';
+import "./Nonveg.css";
 
 function Nonveg() {
   const nonVegItems = [
@@ -346,6 +346,11 @@ let NonvegList = subarray.map((nonveg) => (
       />
 
       <h3>{nonveg.name}</h3>
+      <p className="food-desc">
+
+        {nonveg.description}
+
+      </p>
 
       <p className="price">
         ₹{nonveg.price}

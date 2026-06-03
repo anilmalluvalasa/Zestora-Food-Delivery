@@ -112,11 +112,17 @@ const subarr = filteredItems.slice(firstItem,lastItem);
 
       <img src={juice.image} alt={juice.name} />
 
-      <h3>{juice.name}</h3>
+          <h3>{juice.name}</h3>
 
-      <p className="price">
-        ₹{juice.price}
-      </p>
+          <p className="food-desc1">
+
+            {juice.description}
+
+          </p>
+
+          <p className="price">
+            ₹{juice.price}
+          </p>
 
       <p className="rating">
         ⭐⭐⭐⭐⭐

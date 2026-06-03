@@ -153,8 +153,8 @@
   display: grid;
 
 
-  grid-template-columns:
-  repeat(auto-fill,minmax(269px,1fr));
+    grid-template-columns:
+    repeat(4,1fr);
 
   gap: 28px;
 }
@@ -334,14 +334,26 @@ transform:
 
   margin: 18px 18px 8px;
 
-  color: white;
+  color:#ffffff;
 
-  font-size: 19px;
-  font-weight: 700;
+
+  font-size: 20px;
+  font-weight: 800;
 
   line-height: 1.4;
 }
+.food-description{
 
+  margin:0 18px 8px;
+
+  color:#f3f4f6;
+
+  font-size:14px;
+
+  font-weight:500;
+
+  letter-spacing:.3px;
+}
 /* =========================================
    PRICE
 ========================================= */
@@ -389,7 +401,7 @@ transform:
   width: calc(100% - 36px);
 
   margin: 16px 18px 0;
-
+ margin-top: 5px;
   padding: 14px;
 
   border: none;

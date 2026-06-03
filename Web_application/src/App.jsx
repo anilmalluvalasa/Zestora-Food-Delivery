@@ -77,9 +77,9 @@ function App() {
       Drinks
     </Link>
 
-    <Link to="/icecreams">
+   <Link to="/icecreams">
       <i className="fas fa-ice-cream"></i>
-      IceCreams
+      Desserts 
     </Link>
 
       <Link to="/cart" className="cart-link">
