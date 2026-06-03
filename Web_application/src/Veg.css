@@ -1,0 +1,705 @@
+
+.veg-container {
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #111827,
+      #1f2937
+    );
+
+  background-attachment: fixed;
+
+  font-family: "Poppins", sans-serif;
+
+  padding: 20px 0 50px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   PREMIUM BACKGROUND GLOW
+========================================= */
+
+.veg-container::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -200px;
+  left: -200px;
+
+  width: 450px;
+  height: 450px;
+
+  background:
+    rgba(207, 218, 213, 0.1);
+
+  border-radius: 50%;
+
+  filter: blur(140px);
+}
+
+.veg-container::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -200px;
+  bottom: -200px;
+
+  width: 450px;
+  height: 450px;
+
+  background:
+    rgba(250,204,21,0.08);
+
+  border-radius: 50%;
+
+  filter: blur(140px);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.veg-container .title {
+
+  text-align: center;
+
+  font-size: 56px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 65px;
+
+  text-transform: uppercase;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #facc15,
+      #ffffff
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Underline ===== */
+
+.veg-container .title::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -16px;
+
+  transform: translateX(-50%);
+
+  width: 180px;
+  height: 5px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #22c55e,
+      #4ade80,
+      #facc15
+    );
+
+  box-shadow:
+    0 6px 20px rgba(34,197,94,0.35);
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.veg-container ol {
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0 50px;
+
+  display: grid;
+
+grid-template-columns:
+repeat(auto-fill,minmax(260px,1fr));
+
+ justify-content:center;
+
+  gap: 32px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.veg-container ol li {
+  
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.04)
+    );
+
+  backdrop-filter: blur(18px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.35);
+
+  transition: 0.45s ease;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  padding-bottom: 14px;
+}
+
+/* ===== Premium Shine ===== */
+
+.veg-container ol li::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.14),
+      transparent
+    );
+
+  transition: 0.8s ease;
+}
+
+.veg-container ol li:hover::before {
+
+  left: 120%;
+}
+
+/* ===== Hover ===== */
+
+.veg-container ol li:hover {
+
+  transform:
+    translateY(-14px)
+    scale(1.02);
+
+  border-color:
+    rgba(34,197,94,0.25);
+
+  box-shadow:
+    0 28px 55px rgba(0,0,0,0.45);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.veg-container ol li img {
+
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+
+  transition: 0.55s ease;
+}
+
+/* ===== Image Zoom ===== */
+
+.veg-container ol li:hover img {
+
+  transform: scale(1.08);
+}
+
+/* =========================================
+   DISCOUNT
+========================================= */
+
+.veg-container .discount {
+
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  z-index: 5;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff5722,
+      #ff7043
+    );
+
+  color: white;
+
+  padding: 7px 14px;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  box-shadow:
+    0 10px 20px rgba(255,87,34,0.28);
+}
+
+/* =========================================
+   VEG TAG
+========================================= */
+
+.veg-container .veg-tag {
+
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 5;
+
+  background:
+    linear-gradient(
+      135deg,
+      #16a34a,
+      #22c55e
+    );
+
+  color: white;
+
+  padding: 7px 14px;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  box-shadow:
+    0 10px 20px rgba(34,197,94,0.25);
+}
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.veg-container h3{
+
+  margin:16px 18px 6px;
+
+  color:white;
+
+  font-size:19px;
+
+  font-weight:700;
+
+  line-height:1.3;
+}
+
+.food-type{
+
+  margin:0 18px 8px;
+
+  color:#9ca3af;
+
+  font-size:13px;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+}
+/* =========================================
+   PRICE
+========================================= */
+
+.veg-container .price{
+
+  margin:0 18px;
+
+  color:#facc15;
+
+  font-size:18px;
+
+  font-weight:800;
+}
+
+/* =========================================
+   RATING
+========================================= */
+
+.veg-container .rating {
+
+  margin:8px 18px;    
+
+  color: #ffd54f;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.veg-container .rating span {
+
+  color: #d1d5db;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.veg-container ol li button{
+
+  align-self:center;
+
+  width:auto;
+
+  min-width:255px;
+  
+  margin-top:4px;
+
+  padding:12px 22px;
+
+  /* margin-left: 25px; */
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #16a34a,
+      #22c55e
+    );
+
+  color:white;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.35s ease;
+
+  box-shadow:
+    0 12px 24px rgba(34,197,94,0.28);
+}
+/* ===== Hover ===== */
+
+.veg-container ol li button:hover {
+
+  transform:
+    translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #166534,
+      #16a34a
+    );
+
+  box-shadow:
+    0 18px 35px rgba(34,197,94,0.38);
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.veg-container .pagination {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 70px;
+
+  flex-wrap: wrap;
+}
+
+/* ===== Pagination Buttons ===== */
+
+.veg-container .pagination button {
+
+  width: 52px;
+  min-width: 52px;
+
+  height: 52px;
+
+  border: none;
+  border-radius: 16px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 22px rgba(0,0,0,0.25);
+}
+
+/* ===== Hover ===== */
+
+.veg-container .pagination button:hover:not(:disabled) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ec2121,
+      #c21515
+    );
+
+  transform:
+    translateY(-4px)
+    scale(1.05);
+
+  box-shadow:
+    0 16px 30px rgba(34,197,94,0.35);
+}
+
+/* ===== Disabled ===== */
+
+.veg-container .pagination button:disabled {
+
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
+
+/* ===== Prev & Next ===== */
+
+.veg-container .pagination button:first-child,
+.veg-container .pagination button:last-child {
+
+  width: auto;
+
+  padding: 0 24px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #04a91a
+    );
+}
+
+
+.search-box{
+
+  display:flex;
+  letter-spacing:0.4px;
+  justify-content:center;
+ font-size:15px;
+  margin:40px 0 60px;
+}
+
+.search-box input{
+
+  width:100%;
+
+  max-width:560px;
+
+  padding:16px 22px;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:18px;
+
+  background:
+
+  linear-gradient(
+    145deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.04)
+  );
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  color:white;
+
+  font-size:15px;
+
+  font-weight:500;
+
+  backdrop-filter:blur(14px);
+
+  transition:0.35s ease;
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,0.22);
+}
+
+.search-box input::placeholder{
+
+  color:
+  rgba(255,255,255,0.45);
+
+  font-size:14px;
+}
+
+.search-box input:focus{
+
+  border-color:
+  rgba(255,153,0,0.45);
+
+  box-shadow:
+  0 0 20px rgba(255,153,0,0.16);
+
+  transform:
+  translateY(-2px);
+}
+
+
+
+
+
+
+.delivery{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:3px;
+
+  padding:7px 13px;
+
+  width:fit-content;
+
+  border-radius:50px;
+
+  background:
+  rgba(255,255,255,0.06);
+
+  border:
+  1px solid rgba(255,255,255,0.06);
+
+  color:#facc15;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  margin-bottom:6px;
+  margin-left: 10px;
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+  0 8px 18px rgba(0,0,0,0.18);
+}
+
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .veg-container ol {
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+
+  .veg-container ol {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 0 30px;
+  }
+
+  .veg-container .title {
+
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .veg-container ol {
+
+    grid-template-columns: 1fr;
+
+    padding: 0 20px;
+  }
+
+  .veg-container .title {
+
+    font-size: 30px;
+  }
+
+  .veg-container ol li img {
+
+    height: 220px;
+  }
+
+  .veg-container h3 {
+
+    font-size: 20px;
+  }
+}

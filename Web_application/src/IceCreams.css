@@ -1,0 +1,703 @@
+
+
+.icecream-container {
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top left, rgba(255,215,0,0.06), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(251,146,60,0.06), transparent 30%),
+    linear-gradient(
+      135deg,
+      #0b1120,
+      #111827,
+      #1e293b
+    );
+
+  background-attachment: fixed;
+
+  font-family: "Poppins", sans-serif;
+
+  padding: 35px 65px 65px;
+
+  overflow: hidden;
+
+  position: relative;
+  
+  
+}
+
+/* =========================================
+   PREMIUM LIGHT EFFECTS
+========================================= */
+
+.icecream-container::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -220px;
+  left: -220px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(251,191,36,0.08);
+
+  filter: blur(140px);
+}
+
+.icecream-container::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -180px;
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(217,119,6,0.08);
+
+  filter: blur(130px);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.icecream-container .title {
+
+  text-align: center;
+
+  font-size: 58px;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 75px;
+
+  position: relative;
+
+  text-transform: uppercase;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fde68a,
+      #fbbf24,
+      #ffffff
+    );
+
+  background-size: 250% 250%;
+
+  animation: premiumText 6s linear infinite;
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Underline ===== */
+
+.icecream-container .title::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -18px;
+
+  transform: translateX(-50%);
+
+  width: 220px;
+  height: 6px;
+
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #92400e,
+      #d97706,
+      #fbbf24
+    );
+
+  box-shadow:
+    0 8px 25px rgba(251,191,36,0.30);
+}
+
+/* =========================================
+   GRID
+========================================= */
+.icecream-container ol {
+
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0 4px;
+
+  display: grid;
+
+
+  grid-template-columns:
+  repeat(auto-fill,minmax(269px,1fr));
+
+  gap: 28px;
+}
+/* =========================================
+   PREMIUM CARD
+========================================= */
+
+.icecream-container ol li {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.03)
+    );
+
+  backdrop-filter: blur(18px);
+
+  border:
+    1px solid rgba(255,255,255,0.07);
+
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.42);
+
+  transition: 0.45s ease;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 16px;
+}
+
+/* ===== Premium Shine ===== */
+
+.icecream-container ol li::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -130%;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.16),
+      transparent
+    );
+
+  transition: 0.8s ease;
+}
+
+.icecream-container ol li:hover::before {
+
+  left: 130%;
+}
+
+/* ===== Hover ===== */
+
+.icecream-container ol li:hover {
+
+transform:
+  translateY(-6px)
+  scale(1.01);
+
+  border-color:
+    rgba(251,191,36,0.20);
+
+  box-shadow:
+    0 28px 55px rgba(0,0,0,0.55);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.icecream-container ol li img {
+
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+
+  transition: 0.55s ease;
+}
+
+/* ===== Hover ===== */
+
+.icecream-container ol li:hover img {
+
+  transform:
+    scale(1.07);
+}
+
+/* =========================================
+   DISCOUNT BADGE
+========================================= */
+
+.icecream-container .discount {
+
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  z-index: 10;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #f97316
+    );
+
+  color: white;
+
+  padding: 7px 14px;
+
+  border-radius: 14px;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 22px rgba(239,68,68,0.30);
+}
+
+/* =========================================
+   ICE TAG
+========================================= */
+
+.icecream-container .ice-tag {
+
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 10;
+
+  background:
+    linear-gradient(
+      135deg,
+      #92400e,
+      #fbbf24
+    );
+
+  color: white;
+
+  padding: 7px 14px;
+
+  border-radius: 14px;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 22px rgba(217,119,6,0.28);
+}
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.icecream-container h3 {
+
+  margin: 18px 18px 8px;
+
+  color: white;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+/* =========================================
+   PRICE
+========================================= */
+
+.icecream-container .price {
+
+  margin: 0 18px;
+
+  color: #fde68a;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* =========================================
+   RATING
+========================================= */
+
+.icecream-container .rating {
+
+  margin: 12px 18px;
+
+  color: #ffd54f;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.icecream-container .rating span {
+
+  color: #d1d5db;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.icecream-container ol li button {
+
+  width: calc(100% - 36px);
+
+  margin: 16px 18px 0;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #92400e,
+      #d97706,
+      #fbbf24
+    );
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 14px 26px rgba(217,119,6,0.32);
+}
+
+/* ===== Hover ===== */
+
+.icecream-container ol li button:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 18px 34px rgba(217,119,6,0.42);
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.icecream-container .pagination {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 75px;
+
+  flex-wrap: wrap;
+}
+
+/* ===== Pagination Buttons ===== */
+
+.icecream-container .pagination button {
+
+  width: 54px;
+  min-width: 54px;
+
+  height: 54px;
+
+  border: none;
+  border-radius: 18px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 12px 26px rgba(0,0,0,0.28);
+}
+
+/* ===== Hover ===== */
+
+.icecream-container .pagination button:hover:not(:disabled) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #92400e,
+      #d97706,
+      #fbbf24
+    );
+
+  transform:
+    translateY(-5px)
+    scale(1.06);
+
+  box-shadow:
+    0 18px 34px rgba(217,119,6,0.42);
+}
+
+/* ===== Disabled ===== */
+
+.icecream-container .pagination button:disabled {
+
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
+
+/* ===== Prev & Next ===== */
+
+.icecream-container .pagination button:first-child,
+.icecream-container .pagination button:last-child {
+
+  width: auto;
+
+  padding: 0 28px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #92400e,
+      #d97706,
+      #fbbf24
+    );
+}
+
+/* =========================================
+   TEXT ANIMATION
+========================================= */
+
+@keyframes premiumText {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .icecream-container ol {
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+
+  .icecream-container ol {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 0 30px;
+  }
+
+  .icecream-container .title {
+
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .icecream-container ol {
+
+    grid-template-columns: 1fr;
+
+    padding: 0 20px;
+  }
+
+  .icecream-container .title {
+
+    font-size: 32px;
+  }
+
+  .icecream-container ol li img {
+
+    height: 230px;
+  }
+
+  .icecream-container h3 {
+
+    font-size: 20px;
+  }
+}
+
+
+
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.icecream-container .search-box{
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  margin:-30px 0 65px;
+}
+
+.icecream-container .search-box input{
+
+  width:100%;
+
+  max-width:540px;
+
+  padding:16px 22px;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:white;
+
+  font-size:15px;
+
+  font-weight:500;
+
+  backdrop-filter:blur(14px);
+
+  transition:0.35s ease;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.22);
+}
+
+.icecream-container .search-box input::placeholder{
+
+  color:
+    rgba(255,255,255,0.45);
+}
+
+.icecream-container .search-box input:focus{
+
+  border-color:
+    rgba(251,191,36,0.45);
+
+  box-shadow:
+    0 0 20px rgba(251,191,36,0.18);
+
+  transform:
+    translateY(-2px);
+}
+
+/* =========================================
+   DELIVERY BADGE
+========================================= */
+
+.icecream-container .delivery{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  width:fit-content;
+
+  padding:9px 15px;
+
+  margin:0 18px 18px;
+
+  border-radius:50px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  color:#fde68a;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.18);
+}

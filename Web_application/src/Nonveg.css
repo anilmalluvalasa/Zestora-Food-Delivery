@@ -1,0 +1,722 @@
+
+
+.nonveg-container {
+
+  min-height: 100vh;
+
+  padding-top: 10px;
+  padding-bottom: 40px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f1115,
+      #16181d,
+      #241616
+    );
+
+  background-attachment: fixed;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.nonveg-container::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -180px;
+  left: -180px;
+
+  width: 420px;
+  height: 420px;
+
+  background:
+    rgba(255,61,0,0.12);
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+}
+
+.nonveg-container::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: -180px;
+  bottom: -180px;
+
+  width: 420px;
+  height: 420px;
+
+  background:
+    rgba(255,112,67,0.12);
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.nonveg-container .title {
+
+  text-align: center;
+
+  font-size: 58px;
+  font-weight: 900;
+
+  margin: 35px 0 65px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff7043,
+      #ffab91,
+      #ffffff
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    glowTitle 3s infinite alternate;
+}
+
+/* ===== Underline ===== */
+
+.nonveg-container .title::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -16px;
+
+  transform: translateX(-50%);
+
+  width: 180px;
+  height: 6px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff3d00,
+      #ff7043,
+      #ff9800
+    );
+
+  box-shadow:
+    0 8px 20px rgba(255,61,0,0.28);
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.nonveg-container ol {
+
+  list-style:none;
+
+  padding:0 50px 30px;
+
+  margin:0;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fill,minmax(260px,1fr));
+
+  gap:28px;
+}
+
+
+
+.nonveg-container ol li {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.04)
+    );
+
+  backdrop-filter: blur(16px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.35);
+
+  transition: 0.45s ease;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 16px;
+}
+
+/* ===== Shine Effect ===== */
+
+.nonveg-container ol li::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.16),
+      transparent
+    );
+
+  transition: 0.7s ease;
+}
+
+.nonveg-container ol li:hover::before {
+
+  left: 120%;
+}
+
+/* ===== Hover ===== */
+
+.nonveg-container ol li:hover {
+
+  transform:
+    translateY(-14px)
+    scale(1.02);
+
+  border-color:
+    rgba(255,112,67,0.28);
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,0.45);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+.nonveg-container ol li img {
+
+  width:100%;
+
+  height:210px;
+
+  object-fit:cover;
+}
+/* ===== Zoom ===== */
+
+.nonveg-container ol li:hover img {
+
+  transform: scale(1.08);
+}
+
+/* =========================================
+   DISCOUNT BADGE
+========================================= */
+
+.nonveg-container .discount {
+
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff3d00,
+      #ff7043
+    );
+
+  color: white;
+
+  padding: 7px 13px;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 18px rgba(255,61,0,0.25);
+}
+
+/* =========================================
+   NONVEG TAG
+========================================= */
+
+.nonveg-container .nonveg-tag {
+
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b71c1c,
+      #d32f2f
+    );
+
+  color: white;
+
+  padding: 7px 13px;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 18px rgba(211,47,47,0.24);
+}
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.nonveg-container h3 {
+
+  font-size:20px;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.nonveg-container .price {
+
+  margin: 0 18px;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  color: #ff8a65;
+}
+
+/* =========================================
+   RATING
+========================================= */
+
+.nonveg-container .rating {
+
+  margin: 12px 18px;
+
+  color: #ffd54f;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.nonveg-container .rating span {
+
+  color: #d1d5db;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.nonveg-container ol li button {
+
+  width: calc(100% - 36px);
+
+  margin: 14px 18px 0;
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d32f2f,
+      #ff7043
+    );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 12px 24px rgba(255,112,67,0.24);
+}
+
+/* ===== Hover ===== */
+
+.nonveg-container ol li button:hover {
+
+  transform:
+    translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #b71c1c,
+      #ff5722
+    );
+
+  box-shadow:
+    0 18px 35px rgba(255,112,67,0.34);
+}
+
+/* =========================================
+   PREMIUM PAGINATION
+========================================= */
+
+.nonveg-container .pagination {
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 70px 0 30px;
+
+  flex-wrap: wrap;
+}
+
+/* ===== Buttons ===== */
+
+.nonveg-container .pagination button {
+
+  width: 50px !important;
+  min-width: 50px;
+
+  height: 50px;
+
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 16px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ===== Hover ===== */
+
+.nonveg-container .pagination button:hover:not(:disabled) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #d32f2f,
+      #ff7043
+    );
+
+  transform:
+    translateY(-4px)
+    scale(1.06);
+
+  box-shadow:
+    0 14px 30px rgba(255,112,67,0.35);
+}
+
+/* ===== Active ===== */
+
+.nonveg-container .pagination button:focus {
+
+  background:
+    linear-gradient(
+      135deg,
+      #2979e1,
+      #24aadb 
+    );
+}
+
+/* ===== Disabled ===== */
+
+.nonveg-container .pagination button:disabled {
+
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
+
+/* ===== Prev & Next ===== */
+
+.nonveg-container .pagination button:first-child,
+.nonveg-container .pagination button:last-child {
+
+  width: auto !important;
+
+  padding: 0 22px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d32f2f,
+      #ff7043
+    );
+}
+
+@keyframes glowTitle {
+
+  from {
+
+    filter:
+      drop-shadow(
+        0 0 8px rgba(255,61,0,0.25)
+      );
+  }
+
+  to {
+
+    filter:
+      drop-shadow(
+        0 0 18px rgba(255,61,0,0.55)
+      );
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .nonveg-container ol {
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+
+  .nonveg-container ol {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 0 30px 30px;
+  }
+
+  .nonveg-container .title {
+
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .nonveg-container ol {
+
+    grid-template-columns: 1fr;
+
+    padding: 0 20px 20px;
+  }
+
+  .nonveg-container .title {
+
+    font-size: 30px;
+  }
+
+  .nonveg-container ol li img {
+
+    height: 220px;
+  }
+
+  .nonveg-container h3 {
+
+    font-size: 20px;
+  }
+}
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.nonveg-container .search-box{
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  margin:-25px 0 60px;
+}
+
+.nonveg-container .search-box input{
+
+  width:100%;
+
+  max-width:520px;
+
+  padding:16px 22px;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:white;
+
+  font-size:15px;
+
+  font-weight:500;
+
+  backdrop-filter:blur(14px);
+
+  transition:0.35s ease;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.22);
+}
+
+.nonveg-container .search-box input::placeholder{
+
+  color:
+    rgba(255,255,255,0.45);
+}
+
+.nonveg-container .search-box input:focus{
+
+  border-color:
+    rgba(255,112,67,0.45);
+
+  box-shadow:
+    0 0 20px rgba(255,112,67,0.18);
+
+  transform:
+    translateY(-2px);
+}
+
+/* =========================================
+   DELIVERY BADGE
+========================================= */
+
+.nonveg-container .delivery{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  width:fit-content;
+
+  padding:9px 15px;
+
+  margin:0 18px 18px;
+
+  border-radius:50px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  color:#ffd54f;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* =========================================
+   BUTTON ALIGNMENT FIX
+========================================= */
+
+.nonveg-container ol li{
+
+  display:flex;
+
+  flex-direction:column;
+}
+
+.nonveg-container ol li button{
+
+  margin-top:auto;
+}
