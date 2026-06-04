@@ -206,9 +206,7 @@ body::after {
     0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* =========================================
-   HERO TITLE
-========================================= */
+
 
 .overlay h1 {
 
@@ -246,9 +244,7 @@ body::after {
     drop-shadow(0 0 25px rgba(251,191,36,0.22));
 }
 
-/* =========================================
-   FLOAT TITLE
-========================================= */
+
 
 @keyframes floatTitle {
 
@@ -265,9 +261,7 @@ body::after {
   }
 }
 
-/* =========================================
-   HERO SUBTITLE
-========================================= */
+
 
 .overlay p {
 
@@ -282,9 +276,7 @@ body::after {
   margin-bottom: 48px;
 }
 
-/* =========================================
-   HERO BUTTON
-========================================= */
+
 
 .overlay button {
 
@@ -354,7 +346,6 @@ body::after {
   left: 120%;
 }
 
-/* ===== Glow ===== */
 
 .overlay button::after {
 
@@ -387,7 +378,7 @@ body::after {
   opacity: 1;
 }
 
-/* ===== Hover ===== */
+
 
 .overlay button:hover {
 
@@ -437,10 +428,6 @@ body::after {
 
 
 
-/* =========================================
-   FOOD SECTION
-========================================= */
-
 .food-section{
 
   width:100%;
@@ -456,9 +443,6 @@ body::after {
     );
 }
 
-/* =========================================
-   SECTION TITLE
-========================================= */
 
 .food-section h2 {
 
@@ -476,7 +460,7 @@ body::after {
   position: relative;
 }
 
-/* ===== Underline ===== */
+
 
 .food-section h2::after {
 
@@ -502,9 +486,6 @@ body::after {
     );
 }
 
-/* =========================================
-   CAROUSEL
-========================================= */
 
 .carousel {
 
@@ -515,9 +496,6 @@ body::after {
   gap: 42px;
 }
 
-/* =========================================
-   FOOD CARD
-========================================= */
 
 .food-card{
 
@@ -550,9 +528,7 @@ body::after {
     rgba(249,115,22,0.28);
 }
 
-/* =========================================
-   CARD IMAGE
-========================================= */
+
 
 .food-card img {
 
@@ -569,9 +545,6 @@ body::after {
   transform: scale(1.10);
 }
 
-/* =========================================
-   CARD OVERLAY
-========================================= */
 
 .food-card::before{
 
@@ -592,9 +565,7 @@ body::after {
 }
 
 
-/* =========================================
-   CARD TITLE
-========================================= */
+
 
 .food-card h3 {
 
@@ -623,9 +594,7 @@ body::after {
   color: #fde68a;
 }
 
-/* =========================================
-   SHOWCASE SECTION
-========================================= */
+
 .premium-showcase{
 
   position:relative;
@@ -665,7 +634,7 @@ body::after {
     1px solid rgba(255,255,255,0.05);
 }
 
-/* ===== FLOATING GLOW ===== */
+
 
 .premium-showcase::before{
 
@@ -713,7 +682,7 @@ body::after {
     showcaseGlow2 10s ease-in-out infinite alternate;
 }
 
-/* ===== ANIMATIONS ===== */
+
 
 @keyframes showcaseGlow1{
 
@@ -751,9 +720,6 @@ body::after {
 
 
 
-/* =========================================
-   SHOWCASE TITLE
-========================================= */
 
 .premium-showcase h2{
 
@@ -772,15 +738,13 @@ body::after {
       #fde68a,
       #f59e0b
     );
-
+ background-clip: text;
   -webkit-background-clip:text;
 
   -webkit-text-fill-color:transparent;
 }
 
-/* =========================================
-   SHOWCASE SUBTITLE
-========================================= */
+
 
 .showcase-subtitle{
 
@@ -799,9 +763,7 @@ body::after {
   padding:0 20px;
 }
 
-/* =========================================
-   MARQUEE
-========================================= */
+
 
 .premium-showcase marquee{
 
@@ -821,9 +783,7 @@ body::after {
   backdrop-filter:blur(16px);
 }
 
-/* =========================================
-   SHOWCASE IMAGES
-========================================= */
+
 .premium-showcase img{
 
   width:360px;
@@ -845,7 +805,7 @@ body::after {
   transition:0.45s ease;
 }
 
-/* ===== HOVER ===== */
+
 
 .premium-showcase img:hover{
 
@@ -864,7 +824,7 @@ body::after {
     saturate(1.08);
 }
 
-/* ===== Hover ===== */
+
 
 .premium-showcase img:hover {
 

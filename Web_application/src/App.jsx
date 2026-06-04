@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Home from './Home';
 import Veg from './Veg';
 import Nonveg from './Nonveg';
-
 import ContactUs from './ContactUs';
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Cart from './Cart';
@@ -16,10 +15,10 @@ import Register from './Register';
 import Login from './Login';
 
 function App() {
-  
   let cartItems = useSelector((globalState)=>globalState.cart);
   let cartQuantity = cartItems.reduce((total,item)=>(total+item.quantity),0);
 
+  const [menuOpen,setMenuOpen] = useState(false);
 
   let users = JSON.parse(localStorage.getItem("loggedInUser"));
 
@@ -54,8 +53,27 @@ function App() {
   </div>
 
 </div>
+  <div
+  className="menu-toggle"
+  onClick={() =>
+    setMenuOpen(!menuOpen)
+  }
+>
+  <i
+    className={
+      menuOpen
+      ? "fas fa-times"
+      : "fas fa-bars"
+    }
+  ></i>
+</div>
 
-  <div className="nav-links">
+  {/* <div className="nav-links"> */}
+  <div
+  className={
+    menuOpen
+    ? "nav-links active"
+    : "nav-links"}>
 
     <Link to="/">
       <i className="fa-solid fa-house"></i>

@@ -1,5 +1,3 @@
-
-
 .icecream-container {
 
   min-height: 100vh;
@@ -27,9 +25,7 @@
   
 }
 
-/* =========================================
-   PREMIUM LIGHT EFFECTS
-========================================= */
+
 
 .icecream-container::before {
 
@@ -71,9 +67,6 @@
   filter: blur(130px);
 }
 
-/* =========================================
-   TITLE
-========================================= */
 
 .icecream-container .title {
 
@@ -109,7 +102,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* ===== Underline ===== */
+
 
 .icecream-container .title::after {
 
@@ -139,9 +132,7 @@
     0 8px 25px rgba(251,191,36,0.30);
 }
 
-/* =========================================
-   GRID
-========================================= */
+
 .icecream-container ol {
 
   list-style: none;
@@ -158,9 +149,7 @@
 
   gap: 28px;
 }
-/* =========================================
-   PREMIUM CARD
-========================================= */
+
 
 .icecream-container ol li {
 
@@ -193,7 +182,7 @@
   padding-bottom: 16px;
 }
 
-/* ===== Premium Shine ===== */
+
 
 .icecream-container ol li::before {
 
@@ -223,7 +212,7 @@
   left: 130%;
 }
 
-/* ===== Hover ===== */
+
 
 .icecream-container ol li:hover {
 
@@ -238,9 +227,7 @@ transform:
     0 28px 55px rgba(0,0,0,0.55);
 }
 
-/* =========================================
-   IMAGE
-========================================= */
+
 
 .icecream-container ol li img {
 
@@ -252,7 +239,6 @@ transform:
   transition: 0.55s ease;
 }
 
-/* ===== Hover ===== */
 
 .icecream-container ol li:hover img {
 
@@ -260,9 +246,6 @@ transform:
     scale(1.07);
 }
 
-/* =========================================
-   DISCOUNT BADGE
-========================================= */
 
 .icecream-container .discount {
 
@@ -293,9 +276,7 @@ transform:
     0 10px 22px rgba(239,68,68,0.30);
 }
 
-/* =========================================
-   ICE TAG
-========================================= */
+
 
 .icecream-container .ice-tag {
 
@@ -326,9 +307,6 @@ transform:
     0 10px 22px rgba(217,119,6,0.28);
 }
 
-/* =========================================
-   PRODUCT NAME
-========================================= */
 
 .icecream-container h3 {
 
@@ -354,9 +332,7 @@ transform:
 
   letter-spacing:.3px;
 }
-/* =========================================
-   PRICE
-========================================= */
+
 
 .icecream-container .price {
 
@@ -368,9 +344,6 @@ transform:
   font-weight: 800;
 }
 
-/* =========================================
-   RATING
-========================================= */
 
 .icecream-container .rating {
 
@@ -392,9 +365,7 @@ transform:
   color: #d1d5db;
 }
 
-/* =========================================
-   BUTTON
-========================================= */
+
 
 .icecream-container ol li button {
 
@@ -428,7 +399,7 @@ transform:
     0 14px 26px rgba(217,119,6,0.32);
 }
 
-/* ===== Hover ===== */
+
 
 .icecream-container ol li button:hover {
 
@@ -439,9 +410,7 @@ transform:
     0 18px 34px rgba(217,119,6,0.42);
 }
 
-/* =========================================
-   PAGINATION
-========================================= */
+
 
 .icecream-container .pagination {
 
@@ -456,7 +425,6 @@ transform:
   flex-wrap: wrap;
 }
 
-/* ===== Pagination Buttons ===== */
 
 .icecream-container .pagination button {
 
@@ -486,7 +454,7 @@ transform:
     0 12px 26px rgba(0,0,0,0.28);
 }
 
-/* ===== Hover ===== */
+
 
 .icecream-container .pagination button:hover:not(:disabled) {
 
@@ -506,7 +474,7 @@ transform:
     0 18px 34px rgba(217,119,6,0.42);
 }
 
-/* ===== Disabled ===== */
+
 
 .icecream-container .pagination button:disabled {
 
@@ -515,7 +483,6 @@ transform:
   cursor: not-allowed;
 }
 
-/* ===== Prev & Next ===== */
 
 .icecream-container .pagination button:first-child,
 .icecream-container .pagination button:last-child {
@@ -535,9 +502,6 @@ transform:
     );
 }
 
-/* =========================================
-   TEXT ANIMATION
-========================================= */
 
 @keyframes premiumText {
 
@@ -554,9 +518,7 @@ transform:
   }
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+
 
 @media (max-width: 1200px) {
 
@@ -609,9 +571,6 @@ transform:
 
 
 
-/* =========================================
-   SEARCH BOX
-========================================= */
 
 .icecream-container .search-box{
 
@@ -676,9 +635,7 @@ transform:
     translateY(-2px);
 }
 
-/* =========================================
-   DELIVERY BADGE
-========================================= */
+
 
 .icecream-container .delivery{
 
