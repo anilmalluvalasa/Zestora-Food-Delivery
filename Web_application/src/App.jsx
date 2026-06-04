@@ -107,6 +107,7 @@ function App() {
      </Link>
     
     <Link to="/orders">
+     <i className="fa-solid fa-bag-shopping"></i>
       Orders
     </Link>
 
