@@ -61,7 +61,6 @@ if (valid) {
 
   navigate("/veg");
 
-  window.location.reload();
 
 }
 
